@@ -62,10 +62,10 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <button className="nav_toggle-btn" id="nav__toggle-open">
+        <button className="nav__toggle-btn" id="nav__toggle-open">
           <FaBars />
         </button>
-        <button className="nav_toggle-btn" id="nav__toggle-close">
+        <button className="nav__toggle-btn" id="nav__toggle-close">
           <MdOutlineClose />
         </button>
       </div>
