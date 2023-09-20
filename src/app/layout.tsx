@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/navbar";
 import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { montserrat } from "@/assets/fonts/fonts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html
+      lang="en"
+      className={montserrat.className}
+      suppressHydrationWarning={true}
+    >
       <body suppressHydrationWarning={true}>
         <Navbar />
         {children}
