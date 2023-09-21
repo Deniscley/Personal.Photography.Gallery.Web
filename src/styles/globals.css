@@ -2,10 +2,15 @@
   /* ========== GREEN THEME ========== */
   --color-primary: #ff7b02;
   --color-primary-variant: #e5a55d;
-  --color-bg-1: #000e17;
-  --color-bg-2: #001e2d;
-  --color-bg-3: #012734;
-  --color-bg-4: #003347;
+  /* --color-bg-1: #101523; */
+  --color-bg-1: #1e293cff;
+  /* --color-bg-2: #001e2d; */
+  /* --color-bg-2: #061d31ff; */
+  --color-bg-2: hsl(0, 0%, 90%);
+  /* --color-bg-3: #012734; */
+  --color-bg-3: #0c0f1b;
+  /* --color-bg-4: #003347; */
+  --color-bg-4: #061d31ff;
   --color-light: #85a2b2;
   --color-white: hsl(0, 0%, 90%);
 
