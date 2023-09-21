@@ -28,14 +28,13 @@ export default function AboutTemplate() {
               uma pessoa que adora a vida, a família e a busca por conhecimento.
             </p>
             <p>
-              Tenho diversos hobby tais como a arte de desenhar, a música, e
-              sendo assim adoro tocar diversos instrumentos como violão,
-              saxofone, cajon, etc.
+              Tenho diversos hobby tais desenhar, a música, e sendo assim adoro
+              tocar diversos instrumentos como violão, saxofone, cajon, etc.
             </p>
             <p>
               Formado no curso de Ciência da Computação pela Universidade
               Federal de Lavras - UFLA e desde então atuo como desenvolvedor web
-              focando-me em trazer qualidade em usabilidade para os usuários.
+              foco-me em trazer qualidade em usabilidade para os usuários.
             </p>
           </div>
         </div>
