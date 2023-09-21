@@ -1,4 +1,4 @@
-import { Montserrat, Yellowtail } from "next/font/google";
+import { Montserrat, Yellowtail, Kalam } from "next/font/google";
 
 export const yellowtail = Yellowtail({
   subsets: ["latin"],
@@ -12,4 +12,11 @@ export const montserrat = Montserrat({
   variable: "--font-montserrat",
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
+});
+
+export const kalam = Kalam({
+  subsets: ["latin"],
+  variable: "--font-kalam",
+  display: "swap",
+  weight: ["300", "400", "700"],
 });

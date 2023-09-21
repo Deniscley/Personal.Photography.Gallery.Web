@@ -8,10 +8,10 @@ export default function HeaderTemplate() {
           <div className="header__left">
             <div className="header__image-bg"></div>
             <div className="header__image-lg">
-              <img src="/images/foto_perfil.jpg" alt="" />
+              <img src="/images/foto_perfil.jpg" alt="Header Image" />
             </div>
             <div className="header__image-sm">
-              <img src="/images/foto_perfil.jpg" alt="" />
+              <img src="/images/foto_perfil.jpg" alt="Header Image" />
             </div>
           </div>
           <div className="header__right">
