@@ -9,17 +9,6 @@
   --color-light: #85a2b2;
   --color-white: hsl(0, 0%, 90%);
 
-  /* ========== PURPLE THEME ========== */
-  /*
-    --color-primary: #ff7b02;
-    --color-primary-variant: #e5a55d;
-    --color-bg-1: #140021;
-    --color-bg-2: #1e0032;
-    --color-bg-3: #25003e;
-    --color-bg-4: #36005a;
-    --color-light: #d0b8e0;
-    --color-white: hsl(0, 0%, 90%);
-    */
   --container-width-lg: 88%;
   --container-width-md: 92%;
 
@@ -41,7 +30,7 @@ html {
 }
 
 body {
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-kalam), cursive;
   background: var(--color-bg-3);
   color: var(--color-light);
   line-height: 1.7;
@@ -60,6 +49,10 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+}
+
+p {
+  font-size: 1.3rem;
 }
 
 a {
