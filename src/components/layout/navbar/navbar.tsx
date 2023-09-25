@@ -3,7 +3,7 @@ import { useLayoutEffect } from "react";
 import "./navbar.css";
 import { yellowtail } from "@/assets/fonts/fonts";
 import Link from "next/link";
-import { links } from "../../state/routes/routes";
+import { links } from "../../../state/routes/routes";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaBars } from "react-icons/fa";
