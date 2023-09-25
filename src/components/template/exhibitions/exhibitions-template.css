@@ -1,0 +1,58 @@
+#exhibitions {
+  margin-top: 10rem;
+}
+
+.exhibitions__container {
+  position: relative;
+}
+
+.exhibitions__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exhibitions__head > p {
+  width: 45rem;
+}
+
+.exhibitions__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 5rem;
+  gap: 3rem;
+}
+
+.exhibitions__gallery article {
+  border: 0.5rem solid var(--color-bg-4);
+  transition: var(--transition);
+}
+
+.exhibitions__gallery article:nth-child(2) {
+  height: 39.8rem;
+}
+
+.exhibitions__gallery article:nth-child(3) {
+  height: 45.8rem;
+}
+
+.exhibitions__gallery article:nth-child(4) {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+.exhibitions__gallery article:nth-child(5) {
+  height: 44.5rem;
+}
+
+.exhibitions__gallery article img {
+  height: 100%;
+  transition: var(--transition);
+}
+
+.exhibitions__gallery article:hover img {
+  filter: saturate(0);
+}
+
+.exhibitions__gallery article:hover {
+  box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.3);
+}
