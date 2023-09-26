@@ -31,10 +31,10 @@ export default function HeaderTemplate() {
 
       <div className="header__frames">
         <div className="header__frame">
-          <img src="/images/game_nintendo.jpg" alt="Header Frame One" />
+          <img src="/images/camera_1.jpg" alt="Header Frame One" />
         </div>
         <div className="header__frame">
-          <img src="/images/fliperama.jpg" alt="Header Frame Two" />
+          <img src="/images/camera_2.jpg" alt="Header Frame Two" />
         </div>
       </div>
     </>
