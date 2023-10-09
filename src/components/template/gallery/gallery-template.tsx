@@ -2,6 +2,7 @@
 import "./gallery-template.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { GET } from "../../../app/api/gallery/route";
 
 // Import Swiper styles
 import "swiper/css";
@@ -9,10 +10,25 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import { PhotographModel } from "@/core/models/gallery-model";
+import { GetServerSideProps } from "next";
 
-export default function GalleryTemplate() {
+export default async function GalleryTemplate({ repositories }: any) {
+  const data = await GET();
+
+  // useEffect(() => {
+  //   console.log("Dados Back-End: ", repositories);
+  // }, []);
+
+  console.log("Dados Back-End: ", data);
+
   return (
     <section id="gallery">
+      <ul>
+        {repositories?.map((repo: any) => (
+          <li key={repo}>{repo}</li>
+        ))}
+      </ul>
       <div className="container gallery__container swiper mySwiper">
         <div className="gallery__head">
           <h2 className="gallery__title">Minha Galeria</h2>
@@ -62,3 +78,22 @@ export default function GalleryTemplate() {
     </section>
   );
 }
+
+export const getServerSidePropos: GetServerSideProps = async () => {
+  const response = await fetch(
+    "https://localhost:44364/api/galeria/obter-todos",
+    // "https://localhost:44364/api/client/obter-todos",
+    {
+      mode: "no-cors",
+    }
+  );
+
+  const data = response.json();
+  const dataRepository = data;
+
+  return {
+    props: {
+      repositories: dataRepository,
+    },
+  };
+};
