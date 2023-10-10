@@ -1,5 +1,5 @@
 "use client";
-import { useLayoutEffect } from "react";
+// import { useLayoutEffect } from "react";
 import "./navbar.css";
 import { yellowtail } from "@/assets/fonts/fonts";
 import Link from "next/link";
@@ -10,12 +10,12 @@ import { FaBars } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 
 export default function Navbar() {
-  useLayoutEffect(() => {
-    window.addEventListener("scroll", () => {
-      document.querySelector("nav")?.classList.toggle("window-scrolled"),
-        window.scrollY > 0;
-    });
-  }, []);
+  // useLayoutEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     document.querySelector("nav")?.classList.toggle("window-scrolled"),
+  //       window.scrollY > 0;
+  //   });
+  // }, []);
 
   return (
     <nav>

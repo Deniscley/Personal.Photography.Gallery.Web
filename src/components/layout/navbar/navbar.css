@@ -7,14 +7,17 @@ nav {
   top: 0;
   left: 0;
   z-index: 99;
-}
-
-/* nav class on scroll using javascript */
-.window-scrolled {
   background: var(--color-bg-2);
   border-bottom: 0.2rem solid var(--color-bg-3);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 }
+
+/* nav class on scroll using javascript */
+/* .window-scrolled {
+  background: var(--color-bg-2);
+  border-bottom: 0.2rem solid var(--color-bg-3);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+} */
 
 .nav__container {
   height: 100%;
