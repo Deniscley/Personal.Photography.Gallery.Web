@@ -14,13 +14,13 @@ import { PhotographModel } from "@/core/models/gallery-model";
 import { GetServerSideProps } from "next";
 
 export default async function GalleryTemplate({ repositories }: any) {
-  const data = await GET();
+  // const data = await GET();
 
   // useEffect(() => {
   //   console.log("Dados Back-End: ", repositories);
   // }, []);
 
-  console.log("Dados Back-End: ", data);
+  // console.log("Dados Back-End: ", data);
 
   return (
     <section id="gallery">

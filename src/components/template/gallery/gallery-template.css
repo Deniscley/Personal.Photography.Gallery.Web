@@ -41,6 +41,36 @@
   background: var(--color-primary);
 }
 
+@media screen and (max-width: 1024px) {
+  #gallery {
+    margin-top: 8rem;
+  }
+
+  .gallery__container p {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .swiper-wrapper {
+    margin-top: 4rem;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #gallery {
+    margin-top: 6rem;
+  }
+
+  .gallery__container p {
+    margin-top: 1rem;
+  }
+
+  .swiper-wrapper {
+    margin-top: 3rem;
+  }
+}
+
 /* @media screen and (min-width: 412px) {
   .swiper-container {
     width: 412px;
