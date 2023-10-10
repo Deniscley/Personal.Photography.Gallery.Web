@@ -56,3 +56,43 @@
 .exhibitions__gallery article:hover {
   box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (max-width: 1024px) {
+  .exhibitions__head > p {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .exhibitions__gallery {
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+
+  .exhibitions__gallery article {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #exhibitions {
+    margin-top: 6rem;
+  }
+
+  .exhibitions__head {
+    grid-template-columns: 1fr;
+  }
+
+  .exhibitions__head > p {
+    margin-top: 1rem;
+  }
+
+  .exhibitions__gallery {
+    display: block;
+  }
+
+  .exhibitions__gallery article {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 1rem;
+  }
+}
