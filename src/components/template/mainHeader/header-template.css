@@ -93,9 +93,9 @@ header {
   left: 15rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1396px) {
   h1 {
-    line-height: 2rem;
+    line-height: 4rem;
   }
 
   header {
