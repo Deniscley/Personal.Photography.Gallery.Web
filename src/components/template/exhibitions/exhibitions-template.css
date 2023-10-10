@@ -71,6 +71,18 @@
   .exhibitions__gallery article {
     border: none;
   }
+
+  .exhibitions__gallery article:nth-child(2) {
+    height: 25.8rem;
+  }
+
+  .exhibitions__gallery article:nth-child(3) {
+    height: 26.8rem;
+  }
+
+  .exhibitions__gallery article:nth-child(5) {
+    height: 26.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
