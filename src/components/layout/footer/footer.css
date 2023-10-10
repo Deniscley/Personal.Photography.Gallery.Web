@@ -106,3 +106,9 @@ footer a {
     margin-bottom: 2.6rem;
   }
 }
+
+@media screen and (max-width: 280px) {
+  .footer__socials {
+    gap: 0.3rem;
+  }
+}
