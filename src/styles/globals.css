@@ -29,9 +29,20 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: rgb(229, 165, 93, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: var(--color-primary-variant);
+  border-radius: 0.25rem;
+}
+
 body {
   font-family: var(--font-kalam), cursive;
-  background: var(--color-bg-3);
+  background: var(--color-bg-3) url("./../../public/images/bg-texture.png");
   color: var(--color-light);
   line-height: 1.7;
 }
@@ -74,4 +85,30 @@ img {
   display: block;
   object-fit: cover;
   width: 100%;
+}
+
+/*==================== MEDIA QUERIES (medium screens) ====================*/
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+    position: relative;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+    color: var(--color-white);
+  }
 }
