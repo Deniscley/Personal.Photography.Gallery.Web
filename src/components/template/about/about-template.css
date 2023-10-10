@@ -63,7 +63,7 @@
   margin: 0 4rem 1.5rem 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1450px) {
   .about__container {
     grid-template-columns: 40% 54%;
     gap: 6%;
@@ -80,10 +80,6 @@
   .about__image-bg,
   .about__image-sm {
     display: none;
-  }
-
-  .about__image:hover .about__image-lg {
-    border: none;
   }
 
   .about__right {
