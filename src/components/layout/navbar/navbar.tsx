@@ -6,10 +6,17 @@ import Link from "next/link";
 import { links } from "../../../state/routes/routes";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import { RiTwitterXFill } from "react-icons/ri";
+import { usePathname } from "next/navigation";
 import { FaBars } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
+import { useState } from "react";
 
 export default function Navbar() {
+  const isActive = usePathname();
+  const activeNav = "active-nav";
+
+  const [isNavShowing, setIsNavShowing] = useState(false);
+
   // useLayoutEffect(() => {
   //   window.addEventListener("scroll", () => {
   //     document.querySelector("nav")?.classList.toggle("window-scrolled"),
@@ -24,11 +31,17 @@ export default function Navbar() {
           <div className={yellowtail.className}>DENISCLEY MARFRAN.</div>
         </Link>
 
-        <ul className="nav__links">
+        <ul
+          className={`nav__links ${isNavShowing ? "show__nav" : "hide__nav"}`}
+        >
           {links.map(({ name, path }, index) => {
             return (
               <li key={index}>
-                <Link href={path}>
+                <Link
+                  href={path}
+                  className={isActive === path ? activeNav : ""}
+                  onClick={() => setIsNavShowing((prev) => !prev)}
+                >
                   <div>{name}</div>
                 </Link>
               </li>
@@ -62,11 +75,11 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <button className="nav__toggle-btn" id="nav__toggle-open">
-          <FaBars />
-        </button>
-        <button className="nav__toggle-btn" id="nav__toggle-close">
-          <MdOutlineClose />
+        <button
+          className="nav__toggle-btn"
+          onClick={() => setIsNavShowing((prev) => !prev)}
+        >
+          {isNavShowing ? <MdOutlineClose /> : <FaBars />}
         </button>
       </div>
     </nav>
