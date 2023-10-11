@@ -12,9 +12,17 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { PhotographModel } from "@/core/models/gallery-model";
 import { GetServerSideProps } from "next";
+import { useEffect } from "react";
 
-export default async function GalleryTemplate({ repositories }: any) {
-  // const data = await GET();
+export default function GalleryTemplate({ repositories }: any) {
+  let data: any = null;
+  useEffect(() => {
+    GET().then(r => {
+      data = r;
+      console.log("Dados Back-End: ", data.map((d: { id: string; }) => d.id));
+    });
+
+  }, []);
 
   // useEffect(() => {
   //   console.log("Dados Back-End: ", repositories);
