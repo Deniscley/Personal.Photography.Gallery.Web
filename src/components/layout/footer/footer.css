@@ -49,14 +49,14 @@ footer a {
   padding: 0.8rem;
   border-radius: 0.7rem;
   display: flex;
-  /* border: 1px solid transparent; */
+  border: 1px solid transparent;
 }
 
-/* .footer__socials a:hover {
+.footer__socials a:hover {
   background: transparent;
-  color: var(--second-color);
-  border-color: var(--text-color);
-} */
+  color: var(--color-light);
+  border-color: var(--color-light);
+}
 
 .footer__copyright {
   margin-bottom: 4rem;
