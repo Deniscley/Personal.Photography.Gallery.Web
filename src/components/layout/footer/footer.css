@@ -17,12 +17,20 @@ footer a {
   display: inline-block;
 }
 
+.footer__logo div:hover {
+  color: var(--color-light);
+}
+
 .permalinks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   margin: 0 auto 3rem;
+}
+
+.permalinks li a:hover {
+  color: var(--color-light);
 }
 
 .footer__socials {
