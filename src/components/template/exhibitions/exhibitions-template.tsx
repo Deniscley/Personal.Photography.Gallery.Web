@@ -1,6 +1,17 @@
+"use client";
 import "./exhibitions-template.css";
+import { GET } from "../../../app/api/exhibitions/route";
+import { useEffect, useState } from "react";
 
 export default function ExhibitionsTemplate() {
+  const [exhibitionsData, setExhibitionsData] = useState<any[]>();
+
+  useEffect(() => {
+    GET().then((r) => {
+      setExhibitionsData(r);
+    });
+  }, []);
+
   return (
     <section id="exhibitions">
       <div className="container exhibitions__container">
@@ -9,30 +20,13 @@ export default function ExhibitionsTemplate() {
           <p>Um pouquinho de minhas exibições</p>
         </div>
         <div className="exhibitions__gallery">
-          <article>
-            <img src="./images/exhibitions/20220301_183703.jpg" alt=""></img>
-          </article>
-          <article>
-            <img src="./images/exhibitions/1665889632664.jpg" alt=""></img>
-          </article>
-          <article>
-            <img
-              src="./images/exhibitions/IMG_20230429_103309.jpg"
-              alt=""
-            ></img>
-          </article>
-          <article>
-            <img
-              src="./images/exhibitions/PSX_20200613_213746.jpg"
-              alt=""
-            ></img>
-          </article>
-          <article>
-            <img
-              src="./images/exhibitions/Screenshot_20230711_000624_Instagram.jpg"
-              alt=""
-            ></img>
-          </article>
+          {exhibitionsData?.map(({ id, base64Data }) => {
+            return (
+              <article key={id}>
+                <img src={base64Data} alt="Fotos pessoais" />
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

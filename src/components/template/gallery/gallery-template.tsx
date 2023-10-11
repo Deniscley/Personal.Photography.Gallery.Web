@@ -10,33 +10,19 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import { PhotographModel } from "@/core/models/gallery-model";
-import { GetServerSideProps } from "next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function GalleryTemplate({ repositories }: any) {
-  let data: any = null;
+export default function GalleryTemplate() {
+  const [galleryData, setGalleryData] = useState<any[]>();
+
   useEffect(() => {
-    GET().then(r => {
-      data = r;
-      console.log("Dados Back-End: ", data.map((d: { id: string; }) => d.id));
+    GET().then((r) => {
+      setGalleryData(r);
     });
-
   }, []);
-
-  // useEffect(() => {
-  //   console.log("Dados Back-End: ", repositories);
-  // }, []);
-
-  // console.log("Dados Back-End: ", data);
 
   return (
     <section id="gallery">
-      <ul>
-        {repositories?.map((repo: any) => (
-          <li key={repo}>{repo}</li>
-        ))}
-      </ul>
       <div className="container gallery__container swiper mySwiper">
         <div className="gallery__head">
           <h2 className="gallery__title">Minha Galeria</h2>
@@ -69,39 +55,15 @@ export default function GalleryTemplate({ repositories }: any) {
           modules={[Pagination]}
           className="swiper-wrapper"
         >
-          <SwiperSlide className="swiper-slide">
-            <img
-              src="/images/gallery/18278491_1393881680669626_1416897479870263424_o.jpg"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <img src="/images/gallery/IMG-20190217-WA0007.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <img src="/images/gallery/IMG-20220102-WA0009.jpg" alt="" />
-          </SwiperSlide>
+          {galleryData?.map(({ id, base64Data }) => {
+            return (
+              <SwiperSlide className="swiper-slide" key={id}>
+                <img src={base64Data} alt="Fotos com amigos e família" />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </section>
   );
 }
-
-export const getServerSidePropos: GetServerSideProps = async () => {
-  const response = await fetch(
-    "https://localhost:44364/api/galeria/obter-todos",
-    // "https://localhost:44364/api/client/obter-todos",
-    {
-      mode: "no-cors",
-    }
-  );
-
-  const data = response.json();
-  const dataRepository = data;
-
-  return {
-    props: {
-      repositories: dataRepository,
-    },
-  };
-};

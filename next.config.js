@@ -25,3 +25,9 @@ module.exports = {
     return [];
   },
 };
+
+module.exports = {
+  env: {
+    customKey: "https://localhost:44364",
+  },
+};
