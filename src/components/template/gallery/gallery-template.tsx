@@ -3,6 +3,7 @@ import "./gallery-template.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GET } from "../../../app/api/gallery/route";
+import Spinner from "@/components/layout/spinner/spinner";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,10 +15,12 @@ import { useEffect, useState } from "react";
 
 export default function GalleryTemplate() {
   const [galleryData, setGalleryData] = useState<any[]>();
+  const [statusSpinner, setStatusSpinner] = useState<boolean>(false);
 
   useEffect(() => {
     GET().then((r) => {
       setGalleryData(r);
+      setStatusSpinner(true);
     });
   }, []);
 
@@ -55,6 +58,7 @@ export default function GalleryTemplate() {
           modules={[Pagination]}
           className="swiper-wrapper"
         >
+          {!statusSpinner && <Spinner />}
           {galleryData?.map(({ id, base64Data }) => {
             return (
               <SwiperSlide className="swiper-slide" key={id}>
