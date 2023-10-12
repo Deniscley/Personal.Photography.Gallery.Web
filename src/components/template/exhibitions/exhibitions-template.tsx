@@ -2,13 +2,16 @@
 import "./exhibitions-template.css";
 import { GET } from "../../../app/api/exhibitions/route";
 import { useEffect, useState } from "react";
+import Spinner from "@/components/layout/spinner/spinner";
 
 export default function ExhibitionsTemplate() {
   const [exhibitionsData, setExhibitionsData] = useState<any[]>();
+  const [statusSpinner, setStatusSpinner] = useState<boolean>(false);
 
   useEffect(() => {
     GET().then((r) => {
       setExhibitionsData(r);
+      setStatusSpinner(true);
     });
   }, []);
 
@@ -19,14 +22,18 @@ export default function ExhibitionsTemplate() {
         <div className="exhibitions__head">
           <p>Um pouquinho de minhas exibições</p>
         </div>
-        <div className="exhibitions__gallery">
-          {exhibitionsData?.map(({ id, base64Data }) => {
-            return (
-              <article key={id}>
-                <img src={base64Data} alt="Fotos pessoais" />
-              </article>
-            );
-          })}
+
+        <div>
+          {!statusSpinner && <Spinner />}
+          <div className="exhibitions__gallery">
+            {exhibitionsData?.map(({ id, base64Data }) => {
+              return (
+                <article key={id}>
+                  <img src={base64Data} alt="Fotos pessoais" />
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
