@@ -87,6 +87,39 @@ img {
   width: 100%;
 }
 
+.btn {
+  color: var(--color-bg-4);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.7rem 2rem;
+  background: var(--color-primary);
+  border-radius: 1.2rem;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--color-primary-variant);
+  color: var(--color-light);
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.notfound-error__container {
+  margin-top: 10rem;
+  text-align: center;
+  padding-top: 8rem;
+}
+
+.notfound-error__container .btn {
+  margin-top: 2rem;
+  margin-bottom: 18rem;
+  display: inline-block;
+}
+
 /*==================== MEDIA QUERIES (medium screens) ====================*/
 @media screen and (max-width: 1024px) {
   .container {
