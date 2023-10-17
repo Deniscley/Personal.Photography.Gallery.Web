@@ -197,7 +197,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 3362px) {
+@media screen and (max-width: 362px) {
   .nav__logo {
     font-size: 0.8rem;
   }
