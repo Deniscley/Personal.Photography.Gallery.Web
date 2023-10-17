@@ -76,7 +76,7 @@ Se você tiver algum feedback, por favor nos deixe saber por meio de deniscleyma
 
 #### Qual o objetivo do projeto ?
 
-Portfólio personalizado para falar um pouco sobre minhas qualidades profissional.
+Galeria pessola de fotos para divulgação de meus momentos.
 
 ## Screenshots
 
