@@ -71,20 +71,6 @@
   }
 }
 
-/* @media screen and (min-width: 412px) {
-  .swiper-container {
-    width: 412px;
-    height: 5px;
-  }
-}
-
-@media screen and (min-width: 280px) {
-  .swiper-container {
-    width: 280px;
-    height: 5px;
-  }
-} */
-
 @media screen and (min-width: 964px) {
   .swiper-slide img {
     height: 500px;

@@ -29,6 +29,7 @@ nav {
 
 .nav__toggle-btn {
   display: none;
+  margin-top: 0.5rem;
 }
 
 .nav__container {
@@ -40,6 +41,7 @@ nav {
 
 .nav__logo {
   font-size: 1.3rem;
+  margin-top: 0.3rem;
 }
 
 .nav__links {
@@ -186,5 +188,17 @@ nav {
   .hide__nav {
     padding-top: 0rem;
     display: none;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .nav__logo {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 3362px) {
+  .nav__logo {
+    font-size: 0.8rem;
   }
 }

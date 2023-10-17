@@ -20,7 +20,7 @@ export default function ExhibitionsTemplate() {
       <div className="container exhibitions__container">
         <h2 className="exhibitions__title">Exibições</h2>
         <div className="exhibitions__head">
-          <p>Um pouquinho de minhas exibições</p>
+          <p>Meu cantinho de exibições pessoais.</p>
         </div>
 
         <div>
