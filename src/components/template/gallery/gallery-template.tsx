@@ -31,7 +31,7 @@ export default function GalleryTemplate() {
           <h2 className="gallery__title">Minha Galeria</h2>
           <div className="empty gallery__empty"></div>
         </div>
-        <p>Amigos e família.</p>
+        <p>Meus momentos com amigos e familiares.</p>
 
         <Swiper
           slidesPerView={"auto"}
