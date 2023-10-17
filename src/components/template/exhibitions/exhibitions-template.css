@@ -79,6 +79,39 @@
   grid-row: 4/4;
 }
 
+@media screen and (max-width: 1650px) {
+  .exhibitions__gallery article:nth-child(1) {
+    height: 35rem;
+    width: 24rem;
+  }
+
+  .exhibitions__gallery article:nth-child(2) {
+    height: 35rem;
+    width: 30rem;
+  }
+
+  .exhibitions__gallery article:nth-child(3) {
+    height: 35rem;
+    width: 24rem;
+  }
+
+  .exhibitions__gallery article:nth-child(4) {
+    height: 57rem;
+  }
+
+  .exhibitions__gallery article:nth-child(6) {
+    height: 35rem;
+  }
+
+  .exhibitions__gallery article:nth-child(7) {
+    height: 35rem;
+  }
+
+  .exhibitions__gallery article:nth-child(8) {
+    height: 35rem;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .exhibitions__gallery article:nth-child(1) {
     height: 30rem;
