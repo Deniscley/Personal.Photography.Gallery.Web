@@ -364,35 +364,50 @@
 
 @media screen and (max-width: 375px) {
   .exhibitions__gallery article:nth-child(1) {
-    height: 9rem;
+    height: 8rem;
     width: 6.5rem;
   }
 
   .exhibitions__gallery article:nth-child(3) {
-    height: 9rem;
+    height: 8rem;
+    width: 6rem;
+  }
+
+  .exhibitions__gallery article:nth-child(4) {
+    height: 13rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .exhibitions__gallery article:nth-child(1) {
+    height: 8rem;
+    width: 6rem;
+  }
+
+  .exhibitions__gallery article:nth-child(2) {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .exhibitions__gallery article:nth-child(3) {
+    height: 8rem;
     width: 6rem;
   }
 
   .exhibitions__gallery article:nth-child(4) {
     height: 15rem;
   }
-}
 
-@media screen and (max-width: 360px) {
-  .exhibitions__gallery article:nth-child(1) {
-    width: 7rem;
+  .exhibitions__gallery article:nth-child(6) {
+    height: 8rem;
   }
 
-  .exhibitions__gallery article:nth-child(2) {
-    width: 7rem;
+  .exhibitions__gallery article:nth-child(7) {
+    height: 8rem;
   }
 
-  .exhibitions__gallery article:nth-child(3) {
-    width: 6rem;
-  }
-
-  .exhibitions__gallery article:nth-child(4) {
-    height: 14rem;
+  .exhibitions__gallery article:nth-child(8) {
+    height: 8rem;
   }
 }
 
